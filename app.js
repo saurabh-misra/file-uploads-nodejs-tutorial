@@ -1,7 +1,10 @@
 // imports
 const express = require( 'express' ),
   axios = require( 'axios' ).default,
+  multer = require( "multer" ),
   fsProm = require( "fs/promises" ),
+  fs = require( "fs" ),
+  FormData = require( "form-data" ),
   { getFilename } = require( "./utils" );
 
 // global variables, constants and defaults
@@ -13,8 +16,6 @@ const PORT = 3000,
 axios.defaults.baseURL = `http://localhost:${ PORT }`;
 const app = express();
 
-
-// Your code goes here
-
+// YOUR CODE GOES HERE
 
 app.listen( PORT, () => console.log( `👂API Server listening on port ${PORT}` ));
